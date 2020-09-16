@@ -76,7 +76,7 @@ function draw(){
 async function getTime(){
     var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
     var responseJSON = await response.json();
-    var datetime = responseJSON.datetime;
+    var datetime = await responseJSON.datetime;
      hour1 = datetime.slice(11,13);
      min = datetime.slice(14,16);
      sec = datetime.slice(17,19);
